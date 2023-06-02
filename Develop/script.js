@@ -1,6 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
 $(document).ready(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -65,17 +66,8 @@ $(document).ready(function () {
   $('#hour-16 .description').val(localStorage.getItem('hour-16'));
   $('#hour-17 .description').val(localStorage.getItem('hour-17'));
   // TODO: Add code to display the current date in the header of the page.
-  setInterval(() => {
-    $('#currentDay').text(dayjs());
+    setInterval(() => {
+    $('#currentDay').text(dayjs().format("MMMM D, YYYY - hh:mm:ss A"));
   }, 1000);
   
-  var utc = require("dayjs/plugin/utc");
-  var timezone = require("dayjs/plugin/timezone");
-
-  dayjs.extend(utc);
-  dayjs.extend(timezone);
-
-  const timestamp = "2014-06-01 12:00";
-  const tz = "America/New_York";
-
 });
