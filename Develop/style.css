@@ -63,3 +63,8 @@ textarea {
   padding-bottom: 10px;
   color: black;
 }
+
+
+.show {
+  display: block;
+}
