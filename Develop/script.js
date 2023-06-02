@@ -14,10 +14,10 @@ $(document).ready(function () {
     let time= $(this).parent().attr("id");
     localStorage.setItem(time,value);
 
-    
-
-
-
+    $(".notification").addClass("show");
+    setTimeout(function() {
+      $(".notification").removeClass("show");
+    }, 5000);
   });
 
 
